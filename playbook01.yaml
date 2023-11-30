@@ -1,4 +1,4 @@
-- name: Play1
+- name: "Play1"
   hosts: all
   tasks:
     - name: "printing task1 of play1"
@@ -9,4 +9,4 @@
       ansible.builtin.debug:
         mgs: "The value is : {{amlan}}"
       vars:
-        amlan: ping.google.com
+        amlan: "ping.google.com"
