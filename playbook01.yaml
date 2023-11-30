@@ -1,8 +1,6 @@
-- name: Demo on priniting variable
+- name: "Printing play1"
   hosts: all
-  vars:
-    url: play.google.com      # Declaring variable at global level
   tasks:
-    - name: printing the variable
+    - name: "Task1 on play1"
       ansible.builtin.debug:
-        msg: "the value is {{vars}}"
+        msg: "Hai from task1 of play1"
