@@ -5,4 +5,4 @@
   tasks:
     - name: printing the variable
       ansible.buletin.debug:
-        msg: {{vars}}
+        msg: "the value is {{vars}}"
