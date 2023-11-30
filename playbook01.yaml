@@ -1,4 +1,4 @@
-- name:Demo on priniting variable
+- name: Demo on priniting variable
   hosts: all
   vars:
     url:play.google.com      # Declaring variable at global level
