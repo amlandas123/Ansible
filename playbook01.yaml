@@ -1,5 +1,7 @@
 - name: "Printing play1"
   hosts: all
+  vars:
+    url: play.google.com
   tasks:
     - name: "Task1 on play1"
       ansible.builtin.debug:
@@ -8,3 +10,7 @@
     - name: "Task2 on play1"
       ansible.builtin.debug:
         msg: "Hai from task2 of play2"
+
+    - name: "Printing Global Variable as task3 "
+      ansible.builtin.debug:
+        msg: "Hai the value is {{url}}"
