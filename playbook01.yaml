@@ -11,6 +11,8 @@
       ansible.builtin.debug:
         msg: "Hai from task2 of play2"
 
-    - name: "Printing Global Variable as task3 "
+    - name: "Printing Variable as task3 "
       ansible.builtin.debug:
         msg: "Hai the value is {{url}}"
+      vars:
+        url: locally.com
