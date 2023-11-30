@@ -4,5 +4,5 @@
     url: play.google.com      # Declaring variable at global level
   tasks:
     - name: printing the variable
-      ansible.buletin.debug:
+      ansible.builtin.debug:
         msg: "the value is {{vars}}"
