@@ -1,5 +1,5 @@
 - name:Demo on priniting variable
-  host: all
+  hosts: all
   vars:
     url:play.google.com      # Declaring variable at global level
   tasks:
