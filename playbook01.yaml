@@ -1,0 +1,8 @@
+- name:Demo on priniting variable
+  host: all
+  vars:
+    url:play.google.com      # Declaring variable at global level
+  tasks:
+    - name:printing the variable
+      ansible.buletin.debug:
+        msg: "The value is {{vars}}"
