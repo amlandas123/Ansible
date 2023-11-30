@@ -1,18 +1,12 @@
-- name: "Printing play1"
-  hosts: all
-  vars:
-    url: play.google.com
+- name: Play1
+  hosts: All
   tasks:
-    - name: "Task1 on play1"
+    - name: "printing task1 of play1"
       ansible.builtin.debug:
-        msg: "Hai from task1 of play1"
+        msg: "Hello from task1 of play1"
 
-    - name: "Task2 on play1"
+    - name: "Printing Local Variable"
       ansible.builtin.debug:
-        msg: "Hai from task2 of play2"
-
-    - name: "Printing Variable as task3 "
-      ansible.builtin.debug:
-        msg: "Hai the value is {{url}}"
+        mgs: "The value is : {{amlan}}"
       vars:
-        url: locally.com
+        amlan: ping.google.com
