@@ -10,3 +10,11 @@
         msg: "The value is {{amlan}}"
       vars:
         amlan: "ping.google.com"
+
+    - name: "Executing shell command"
+      ansible.builtin.shell: "uptime"
+      register: output
+
+    - name: "Printing shell output"
+      ansible.builtin.debug:
+        msg: The result is : {{output}}""
