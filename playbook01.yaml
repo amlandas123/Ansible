@@ -17,4 +17,4 @@
 
     - name: "Printing shell output"
       ansible.builtin.debug:
-        msg: The result is {{output}}""
+        msg: The result is {{output.stdout}}""
