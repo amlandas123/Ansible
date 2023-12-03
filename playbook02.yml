@@ -1,0 +1,6 @@
+- name: printing the facts
+  hosts: all
+  tasks:
+    - name: printing the value
+      ansible.builtin.debug:
+        msg: The value is {{ansible_mounts}} 
