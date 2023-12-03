@@ -19,6 +19,6 @@
       ansible.builtin.debug:
         msg: "The result is {{output.stdout}}"
 
-    -name: "printing the Variable"
+    - name: "printing the Variable"
       ansible.builtin.debug:
         msg: "The value is {{xyz}}"" 
