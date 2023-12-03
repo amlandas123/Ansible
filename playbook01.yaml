@@ -21,4 +21,4 @@
 
     - name: "printing the Variable"
       ansible.builtin.debug:
-        msg: "The value is {{xyz}}"" 
+        msg: "The value is {{xyz}}"
