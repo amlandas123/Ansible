@@ -5,4 +5,4 @@
     - name: Installing Nginx
       ansible.builtin.package:
         name: Nginx
-        status: present
+        state: present
