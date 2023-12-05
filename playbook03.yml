@@ -2,7 +2,9 @@
   hosts: all
   become: True
   tasks:
-    - name: Installing nginx
+    - name: Installing packages httpd and MariaDB
       ansible.builtin.package:
-        name: nginx
+        name: 
+          - httpd
+          - MariaDB
         state: present
