@@ -1,4 +1,5 @@
 - name: Configuring roboshop project
+  become: True
   hosts: all
   roles:
     - role: frontend
