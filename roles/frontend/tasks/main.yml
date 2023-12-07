@@ -19,7 +19,28 @@
     remote_src: yes 
 
 #4.Cleaning the existing files
-#- name: Remove file (delete file)
-#  ansible.builtin.file:
-#    path: /etc/foo.txt/usr/share/nginx/html
-#    state: absent
+- name: Remove file (delete default files)
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
+
+
+- name: Copy file with owner and permissions
+  ansible.builtin.copy:
+    src: frontend-main/*
+    dest: /usr/share/nginx/html/
+
+
+- name: Copy files
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/*
+    dest: /usr/share/nginx/html/
+
+
+- name: Copy files
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static/*
+    dest: /usr/share/nginx/html/
+
+
+
