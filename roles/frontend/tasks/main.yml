@@ -27,8 +27,9 @@
 #5 Copying application files
 - name: Copy files
   ansible.builtin.copy:
-    src: /tmp/frontend-main/
-    dest: /usr/share/nginx/
+    src: /tmp/frontend-main/static
+    dest: /usr/share/nginx/html
+    
     remote_src: yes
 
 #6 Copying localhost.conf file
