@@ -39,6 +39,23 @@
     remote_src: yes
 
 
+- name: Remove file (delete default files)
+  ansible.builtin.file:
+    path: /tmp/frontend-main/
+    state: absent
+
+- name: Remove file (delete default files)
+  ansible.builtin.file:
+    path: /usr/share/nginx/README.md
+    state: absent
+
+- name: Remove file (delete default files)
+  ansible.builtin.file:
+    path: /usr/share/nginx/localhost.conf
+    state: absent
+
+
+
 
 
 
