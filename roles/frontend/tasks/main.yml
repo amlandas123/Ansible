@@ -31,7 +31,12 @@
     dest: /usr/share/nginx/
     remote_src: yes
 
-
+#6 Copying localhost.conf file
+- name: Copy localhost.conf files
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/localhost.conf
+    dest: /etc/nginx/default.d/roboshop.conf
+    remote_src: yes
 
 
 
