@@ -24,6 +24,11 @@
     path: /usr/share/nginx/html/
     state: absent
 
+#5 Copying application files
+- name: Copy files
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/
+    dest: /usr/share/nginx/
 
 
 
