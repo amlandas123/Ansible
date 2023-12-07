@@ -21,7 +21,7 @@
 #4.Cleaning the existing files
 - name: Remove file (delete default files)
   ansible.builtin.file:
-    path: /usr/share/nginx/html/
+    path: /usr/share/nginx/html/*
     state: absent
 
 
