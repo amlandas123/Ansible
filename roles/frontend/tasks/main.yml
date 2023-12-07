@@ -25,22 +25,9 @@
     state: absent
 
 
-- name: Copy file with owner and permissions
-  ansible.builtin.copy:
-    src: frontend-main/*
-    dest: /usr/share/nginx/html/
 
 
-- name: Copy files
-  ansible.builtin.copy:
-    src: /tmp/frontend-main/*
-    dest: /usr/share/nginx/html/
 
-
-- name: Copy files
-  ansible.builtin.copy:
-    src: /tmp/frontend-main/static/*
-    dest: /usr/share/nginx/html/
 
 
 
