@@ -29,6 +29,7 @@
   ansible.builtin.copy:
     src: /tmp/frontend-main/
     dest: /usr/share/nginx/
+    remote_src: yes
 
 
 
