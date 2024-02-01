@@ -11,6 +11,6 @@
       ansible.builtin.debug:
         msg: "Hello the url is {{xyz}}"
       vars:
-        msg: "facebook.com"
+        xyz: "facebook.com"
 
  
