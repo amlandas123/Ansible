@@ -5,6 +5,10 @@
   tasks:
     - name: "printing global variable"
       ansible.builtin.debug:
-        msg: "Hello the url is {{url}}"
+        msg: "Hello the url is {{url}}" 
+
+    - name: "printing unknown variable"
+      ansible.builtin.debug:
+        msg: "Hello the url is {{xyz}}"
 
  
