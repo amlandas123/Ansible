@@ -3,8 +3,8 @@
   tasks:
     - name: Print Hello world
       ansible.builtin.debug:
-        msg:"Hello world"
+      msg:"Hello world"
 
     - name: Print name
       ansible.builtin.debug:
-        msg:"Hello This is Amlan"
+      msg:"Hello This is Amlan"
