@@ -1,10 +1,10 @@
 - name: "printing hello world"
   hosts: all
   tasks:
-    - name: Print Hello world
+    - name: "Printing Local Variable"
       ansible.builtin.debug:
-       msg:"Hello world"
+        msg: "Hello world"
 
-    - name: Print name
+    - name: "Printing Local Variable"
       ansible.builtin.debug:
-       msg:"Hello This is Amlan"
+        msg: "This is amlan"
