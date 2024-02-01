@@ -1,0 +1,10 @@
+- name: "Play1"
+  hosts: all
+  vars:
+    url: play.google.com
+  tasks:
+    - name: "printing global variable"
+      ansible.builtin.debug:
+        msg: "Hello the url is {{url}}"
+
+ 
