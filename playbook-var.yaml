@@ -10,5 +10,7 @@
     - name: "printing unknown variable"
       ansible.builtin.debug:
         msg: "Hello the url is {{xyz}}"
+      vars:
+        msg: "facebook.com"
 
  
