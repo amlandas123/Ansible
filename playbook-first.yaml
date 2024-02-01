@@ -1,6 +1,9 @@
-name: "printing hello world"
-hosts: all
-tasks:
+- name: "printing hello world"
+  hosts: all
+  tasks:
     -name: "Print Hello world"
      ansible.builtin.debug:
        msg:"Hello world"
+    -name: "Print name"
+     ansible.builtin.debug:
+       msg:"Hello This is Amlan"
