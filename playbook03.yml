@@ -3,7 +3,7 @@
   become: True
   tasks:
     - name: Installing packages httpd and MariaDB
-      ansible.builtin.package:
+      ansible.builtin.debug:
         name: 
           - httpd
           - MariaDB
