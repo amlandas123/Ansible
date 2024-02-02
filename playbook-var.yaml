@@ -21,7 +21,7 @@
         abc: "Keep Working"
 
     - name: "Printing command line variable"
-      ansible.buletin.debug:
+      ansible.builtin.debug:
         msg: "The output url is {{pqr}}"      
 
       
