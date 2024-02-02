@@ -22,7 +22,9 @@
 
     - name: "Printing command line variable"
       ansible.builtin.debug:
-        msg: "The output url is {{pqr}}"      
+        msg: "The output url is {{pqr}}" 
+        
+             
 
       
  
