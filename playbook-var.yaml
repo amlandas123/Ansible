@@ -13,9 +13,16 @@
       vars:
         xyz: "facebook.com"
 
-    - name: "printing unknown variable"
+    - name: "printing local variable"
       ansible.builtin.debug:
-        msg: "Hello the url is {{abc}}"    
+        msg: "Hello the url is {{abc}}"
+
+      vars:
+        abc: "Keep Working"
+
+    - name: "Printing command line variable"
+      ansible.buletin.debug
+        msg: "The output url is {{pqr}}"      
 
       
  
