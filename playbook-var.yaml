@@ -2,6 +2,9 @@
   hosts: all
   vars:
     url: play.google.com
+  vars_files:
+    - {{ENV}}.yaml
+
   tasks:
     - name: "printing global variable"
       ansible.builtin.debug:
@@ -20,9 +23,9 @@
       vars:
         abc: "Keep Working"
 
-    - name: "Printing command line variable"
+    - name: "Printing Specific value"
       ansible.builtin.debug:
-        msg: "The output url is {{pqr}}" 
+        msg: "The Instace type is {{INSTANCE_TYPE}} and instance size is {{DISK_SIZE}}"
         
              
 
