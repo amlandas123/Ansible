@@ -3,7 +3,7 @@
   vars:
     url: play.google.com
   vars_files:
-    - {{ENV}}.yaml
+    - "{{ENV}}.yaml"
 
   tasks:
     - name: "printing global variable"
