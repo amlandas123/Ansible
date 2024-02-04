@@ -3,9 +3,9 @@
   vars:
     url: play.google.com
   vars_files:
-    - "{{ENV}}.yaml"
+    - "{{ ENV }}.yaml"
   vars_files:  
-    - "{{PLACE}}.yaml"  
+    - "{{ PLACE }}.yaml"  
 
   tasks:
     - name: "printing global variable"
