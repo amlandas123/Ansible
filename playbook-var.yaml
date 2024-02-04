@@ -3,8 +3,9 @@
   vars:
     url: play.google.com
   vars_files:
-    - "{{ ENV }}.yaml";"{{ PLACE }}.yaml"
-  
+    - "{{ ENV }}.yaml"
+  # vars_files:  
+  #   - "{{ PLACE }}.yaml"  
 
   tasks:
     - name: "printing global variable"
@@ -28,9 +29,9 @@
       ansible.builtin.debug:
         msg: "The Instace type is {{INSTANCE_TYPE}} and instance size is {{DISK_SIZE}}"
         
-    - name: "Printing self stayed cities"
-      ansible.builtin.debug:
-        msg: "I stayed in {{CITY}} with location {{LOCATION}} of pincode {{PINCODE}}"    
+    # - name: "Printing self stayed cities"
+    #   ansible.builtin.debug:
+    #     msg: "I stayed in {{CITY}} with location {{LOCATION}} of pincode {{PINCODE}}"    
              
 
       
