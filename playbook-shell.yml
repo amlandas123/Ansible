@@ -12,7 +12,7 @@
 
     - name: capturing the exit code using set_fact
       set_fact:
-        EXITCODE:"{{output.rc}}"    
+        EXITCODE: "{{output.rc}}"    
 
     - name: Printing Exit code 
       ansible.builtin.debug:
