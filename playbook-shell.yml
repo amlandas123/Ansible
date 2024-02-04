@@ -3,7 +3,17 @@
   tasks:
     - name: Running shell module
       ansible.builtin.shell: uptime
+      register: output
 
 
-      
+    - name: Running shell module
+      ansible.builtin.debug:
+        msg: "The Uptime of the servers are {{output}}"  
+
+        
+
+
+
+
+
       
