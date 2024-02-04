@@ -29,7 +29,7 @@
       ansible.builtin.debug:
         msg: "The Instace type is {{INSTANCE_TYPE}} and instance size is {{DISK_SIZE}}"
         
-    - NAME: "Printing self stayed cities"
+    - name: "Printing self stayed cities"
       ansible.builtin.debug:
         msg: "I stayed in {{CITY}} with location {{LOCATION}} of pincode {{PINCODE}}"    
              
