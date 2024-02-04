@@ -2,10 +2,10 @@
   hosts: all
   vars:
     url: play.google.com
-  vars_files:
-    - "{{ ENV }}.yaml"
-  # vars_files:  
-  #   - "{{ PLACE }}.yaml"  
+  # vars_files:
+  #   - "{{ ENV }}.yaml"
+  vars_files:  
+    - "{{ PLACE }}.yaml"  
 
   tasks:
     - name: "printing global variable"
@@ -25,13 +25,13 @@
       vars:
         abc: "Keep Working"
 
-    - name: "Printing Specific value"
-      ansible.builtin.debug:
-        msg: "The Instace type is {{INSTANCE_TYPE}} and instance size is {{DISK_SIZE}}"
-        
-    # - name: "Printing self stayed cities"
+    # - name: "Printing Specific value"
     #   ansible.builtin.debug:
-    #     msg: "I stayed in {{CITY}} with location {{LOCATION}} of pincode {{PINCODE}}"    
+    #     msg: "The Instace type is {{INSTANCE_TYPE}} and instance size is {{DISK_SIZE}}"
+        
+    - name: "Printing self stayed cities"
+      ansible.builtin.debug:
+        msg: "I stayed in {{CITY}} with location {{LOCATION}} of pincode {{PINCODE}}"    
              
 
       
