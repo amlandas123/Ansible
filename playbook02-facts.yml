@@ -1,7 +1,7 @@
 - name: printing the facts
   hosts: all
   tasks:
-    - name: printing the value
+    - name: printing the IP address
       ansible.builtin.debug:
-        msg: The value is {{ansible_uptime_seconds}} 
+        msg: The value is {{ansible_facts.ansible_all_ipv4_addresses}} 
         
