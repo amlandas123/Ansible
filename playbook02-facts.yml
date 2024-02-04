@@ -3,5 +3,5 @@
   tasks:
     - name: printing the IP address
       ansible.builtin.debug:
-        msg: The value is {{ansible_mounts.block_total}} 
+        msg: The value is {{ansible_default_ipv4.address}} 
         
