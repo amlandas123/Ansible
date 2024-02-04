@@ -10,6 +10,14 @@
       ansible.builtin.debug:
         msg: "The Uptime of the servers are {{output.stdout}}"  
 
+    - name: capturing the exit code using set_fact
+      set_fact:
+        EXITCODE:"{{output.rc}}"    
+
+    - name: Printing Exit code 
+      ansible.builtin.debug:
+        msg: "The Exit code is {{EXITCODE}}"    
+
 
 
 
