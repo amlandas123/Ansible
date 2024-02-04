@@ -8,7 +8,7 @@
 
     - name: Running shell module
       ansible.builtin.debug:
-        msg: "The Uptime of the servers are {{output.start}}"  
+        msg: "The Uptime of the servers are {{output.stdout}}"  
 
 
 
