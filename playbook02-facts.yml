@@ -3,5 +3,5 @@
   tasks:
     - name: printing the value
       ansible.builtin.debug:
-        msg: The value is {{ansible_mounts}} 
+        msg: The value is {{ansible_uptime_seconds}} 
         
