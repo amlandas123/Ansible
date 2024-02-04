@@ -2,9 +2,9 @@
   hosts: all
   vars:
     url: play.google.com
-  vars_file:
+  vars_files:
     - "{{ ENV }}.yaml"
-  vars_file:  
+  vars_files:  
     - "{{ PLACE }}.yaml"  
 
   tasks:
