@@ -4,6 +4,7 @@
     url: play.google.com
   vars_files:
     - "{{ENV}}.yaml"
+  vars_files:  
     - "{{PLACE}}.yaml"  
 
   tasks:
