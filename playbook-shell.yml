@@ -1,23 +1,13 @@
-- name: "Demo on Shell module"
+- name: Demo on Shell command
   hosts: all
   tasks:
-    - name: Running shell module
-      ansible.builtin.shell: uptime
-      register: output
+    - name: shell command Demo
+      ansible.builtin.shell: df -hT
+      register: out
 
-
-    - name: Running shell module
+    - name: printing shell command
       ansible.builtin.debug:
-        msg: "The Uptime of the servers are {{output.stdout}}"  
-
-    - name: capturing the exit code using set_fact
-      set_fact:
-        EXITCODE: "{{output.rc}}"    
-
-    - name: Printing Exit code 
-      ansible.builtin.debug:
-        msg: "The Exit code is {{EXITCODE}}"    
-
+        msg: Here is the output of df -hT {{out}}
 
 
 
