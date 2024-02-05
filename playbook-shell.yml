@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: shell command Demo
-      ansible.builtin.shell: df -hT
+      ansible.builtin.shell: uptime
       register: out
 
     - name: printing shell command
