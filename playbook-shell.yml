@@ -9,8 +9,15 @@
       ansible.builtin.debug:
         msg: Here is the output of df -hT {{out.stdout}}
 
+    - name: demo on set_fact
+      set_facts:
+        "EXITCODE= {{out.rc}}"   
 
+    - name: printing shell command
+      ansible.builtin.debug:
+        msg: Here is the output of exitcode {{EXITCODE}}
 
+     
 
 
 
