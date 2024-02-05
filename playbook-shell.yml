@@ -7,7 +7,7 @@
 
     - name: printing shell command
       ansible.builtin.debug:
-        msg: Here is the output of df -hT {{out}}
+        msg: Here is the output of df -hT {{out.stdout}}
 
 
 
