@@ -5,13 +5,13 @@
       ansible.builtin.shell: uptime
       register: out
 
-    - name: printing shell command
-      ansible.builtin.debug:
-        msg: Here is the output of df -hT {{out.stdout}}
+    # - name: printing shell command
+    #   ansible.builtin.debug:
+    #     msg: Here is the output of df -hT {{out.stdout}}
 
     - name: demo on set_fact
-      set_facts:
-        "EXITCODE= {{out.rc}}"   
+      set_fact:
+        EXITCODE= "{{out.rc}}"   
 
     - name: printing shell command
       ansible.builtin.debug:
