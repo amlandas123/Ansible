@@ -2,7 +2,7 @@
   hosts: all
   become: true
   vars:
-    USER = jerry
+    USER: jerry
   tasks:
     - name: Running Shell command
       ansible.builtin.shell: useradd -u 2006 {{USER}}
