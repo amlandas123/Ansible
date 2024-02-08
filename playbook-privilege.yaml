@@ -3,7 +3,7 @@
   become: true
   tasks:
     - name: Running Shell command
-      ansible.builtin.shell: useradd -u 1006 tom ; cat /etc/passwd |grep tom
+      ansible.builtin.shell: cat /etc/passwd |grep tom
       register: user
 
     - name: Printing user details
