@@ -2,7 +2,7 @@
   hosts: all
   become: true
   vars:
-    USER: jerry
+    USER: peacock
   tasks:
     - name: Running Shell command
       ansible.builtin.shell: useradd -u 2006 {{USER}}
@@ -11,4 +11,4 @@
     - name: Printing user details
       ansible.builtin.debug:
         msg: User {{USER}} has been added
-
+      
