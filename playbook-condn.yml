@@ -4,14 +4,14 @@
   vars:
     action: true
   tasks:
-    - name: This will print for centos only
+    - name: This will print for CentOS only
       ansible.builtin.debug:
         msg: "The OS in the machine is {{ansible_distribution}}"
-      when: ansible_distribution == "centos"
+      when: ansible_distribution == "CentOS"
 
-    - name: This will print for ubuntu only
+    - name: This will print for Ubuntu only
       ansible.builtin.debug:
         msg: "The OS in the machine is {{ansible_distribution}}"
-      when: ansible_distribution == "ubuntu"  
+      when: ansible_distribution == "Ubuntu"  
 
 
