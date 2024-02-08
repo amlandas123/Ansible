@@ -2,7 +2,7 @@
 - name: demo on conditions
   hosts: all
   vars:
-    action: false
+    action: true
   tasks:
     - name: This will print for CentOS only
       ansible.builtin.debug:
@@ -18,4 +18,9 @@
       ansible.builtin.debug:
         msg: Action is True
       when: action
+
+    - name: Run the action when it is defined
+      ansible.builtin.debug:
+        msg: Action is defined
+      when: action is defined
 
