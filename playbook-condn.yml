@@ -21,6 +21,6 @@
 
     - name: Run the action when it is defined
       ansible.builtin.debug:
-        msg: Action is defined
-      when: action is defined
+        msg: Action is undefined
+      when: action is undefined
 
