@@ -8,5 +8,5 @@
 
     - name: Printing user details
       ansible.builtin.debug:
-        msg: User {{user}} has been added
+        msg: User {{user.stdout}} has been added
 
