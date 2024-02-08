@@ -5,7 +5,7 @@
     USER: peacock
   tasks:
     - name: Running Shell command
-      ansible.builtin.shell: useradd -u 2006 {{USER}}
+      ansible.builtin.shell: useradd -u 2007 {{USER}}
       register: user
       
     - name: Printing user details
