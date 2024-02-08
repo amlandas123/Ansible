@@ -1,11 +1,12 @@
 - name: Demo on privilege escalation
   hosts: all
   become: true
+
   tasks:
     - name: Running Shell command
-      ansible.builtin.shell: useradd -u 2006 jerry
+      ansible.builtin.shell: useradd -u 2006 {{USER}}
       register: user
-
+      
     - name: Printing user details
       ansible.builtin.debug:
         msg: User {{user.stdout}} has been added
