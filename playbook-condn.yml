@@ -1,0 +1,17 @@
+
+- name: demo on conditions
+  hosts: all
+  vars:
+    action: true
+  tasks:
+    - name: This will print for centos only
+      ansible.builtin.debug:
+        msg: "The OS in the machine is {{ansible_distribution}}"
+      when: ansible_distribution == "centos"
+
+    - name: This will print for ubuntu only
+      ansible.builtin.debug:
+        msg: "The OS in the machine is {{ansible_distribution}}"
+      when: ansible_distribution == "ubuntu"  
+
+
