@@ -27,7 +27,7 @@
       tags: apache
 
 
-     - name: starting apache
+    - name: starting apache
       ansible.builtin.debug:
         msg: starting apache
       tags: apache
