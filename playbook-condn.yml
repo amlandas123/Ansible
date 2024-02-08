@@ -14,4 +14,8 @@
         msg: "The OS in the machine is {{ansible_distribution}}"
       when: ansible_distribution == "Ubuntu"  
 
+    - name: Run the action
+      ansible.builtin.debug:
+        msg: Action is True
+      when: action
 
