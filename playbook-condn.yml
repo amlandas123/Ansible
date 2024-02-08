@@ -2,7 +2,7 @@
 - name: demo on conditions
   hosts: all
   vars:
-    action: true
+    action: false
   tasks:
     - name: This will print for CentOS only
       ansible.builtin.debug:
