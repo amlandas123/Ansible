@@ -4,8 +4,8 @@
   tasks:
     - name: Demo on adding user
       user:
-        name: pigeon
-        uid: 4003
+        name: "{{username}}"
+        uid: "{{uid}}"
         state: present
       
 
