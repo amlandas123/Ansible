@@ -16,5 +16,13 @@
     - name: printing user details
       ansible.builtin.debug:
         msg: "User details: {{out.stdout}}" #from out variable we are printing only stdout
+
+    - name: demo on set_fact
+      set_fact:
+        EXITCODE= "{{out.rc}}"   
+
+    - name: printing shell command
+      ansible.builtin.debug:
+        msg: Here is the output of exitcode {{EXITCODE}}
   
       
