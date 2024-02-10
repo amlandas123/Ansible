@@ -9,12 +9,12 @@
         state: present
       
 
-    - name: Printing the user details
-      ansible.builtin.shell: id {{username}}
+    - name: Shell command for the user details
+      ansible.builtin.shell: id {{username}}    #output of the shell command is stored in out variable
       register: out
 
-    - name: printing variable
+    - name: printing user details
       ansible.builtin.debug:
-        msg: "User details: {{out.stdout}}"
+        msg: "User details: {{out.stdout}}" #from out variable we are printing only stdout
   
       
