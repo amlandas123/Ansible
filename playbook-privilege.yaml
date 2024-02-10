@@ -10,7 +10,7 @@
       
 
     - name: Printing the user details
-      ansible.builtin.shell: id 4003
+      ansible.builtin.shell: id {{username}}
       register: out
 
     - name: printing variable
