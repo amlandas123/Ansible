@@ -1,14 +1,20 @@
 - name: Demo on privilege escalation
   hosts: all
   become: true
-  vars:
-    USER: peacock
   tasks:
-    - name: Running Shell command
-      ansible.builtin.shell: useradd -u 2007 {{USER}}
-      register: user
+    - name: Demo on adding user
+      user:
+        name: pigeon
+        uid: 4003
+        state: present
       
-    - name: Printing user details
+
+    - name: Printing the user details
+      ansible.builtin.shell: id 4003
+      register: out
+
+    - name: printing variable
       ansible.builtin.debug:
-        msg: User {{USER}} has been added
+        msg: "User details: {{out}}"
+  
       
