@@ -15,6 +15,6 @@
 
     - name: printing variable
       ansible.builtin.debug:
-        msg: "User details: {{out}}"
+        msg: "User details: {{out.stdout}}"
   
       
