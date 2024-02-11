@@ -1,5 +1,6 @@
 - name: Demo on installing package
   hosts: all
+  become: true
   tasks:
     - name: Installing httpd
       ansible.builtin.package:
