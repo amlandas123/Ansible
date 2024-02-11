@@ -1,0 +1,7 @@
+- name: Demo on copying files
+  hosts: all
+  tasks:
+    - name: Copying files
+      ansible.builtin.copy:
+        src: /home/centos/amlan.txt
+        dest: /tmp/
