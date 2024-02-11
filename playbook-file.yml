@@ -6,3 +6,9 @@
         path: /tmp/dasa.txt
         state: touch
         mode: u+rx,g+rx,o-rx
+
+     - name: creating directory
+       ansible.builtin.file:
+          path: /tmp/devdir
+          state: directory
+          mode: '0755'   
