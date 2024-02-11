@@ -4,8 +4,10 @@
   tasks:
     - name: Installing httpd
       ansible.builtin.package:
-        name: 
-          - httpd
-          - nginx
-          - jq
+        name: nginx
         state: present
+
+    - name: starting nginx
+      ansible.builtin.service:
+        name: nginx 
+        state: started   
