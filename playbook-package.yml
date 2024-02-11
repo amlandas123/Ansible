@@ -1,0 +1,7 @@
+- name: Demo on installing package
+  hosts: all
+  tasks:
+    - name: Installing httpd
+      ansible.builtin.package:
+        name: httpd
+        state: present
