@@ -1,0 +1,8 @@
+- name: Demo on creating files
+  hosts: all
+  tasks: 
+    - name: Creating files
+      ansible.builtin.file:
+        path: /tmp/dasa.txt
+        state: touch
+        mode: u+rx,g+rx,o-rx
