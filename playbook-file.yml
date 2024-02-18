@@ -14,7 +14,7 @@
         mode: '0755'  
 
     - name: creating file
-      ansible.builtin.file
+      ansible.builtin.file:
         path: /home/centos/peacock.txt
         state: touch
         mode: '0644'
