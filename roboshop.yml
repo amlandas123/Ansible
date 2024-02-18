@@ -1,5 +1,5 @@
 - name: Configuring roboshop project
-  become: True
-  hosts: "{{component}}"
+  become: true
+  hosts: all
   roles:
-    - role: "{{component}}"
+    - role: frontend

@@ -1,52 +1,10 @@
-
-#1.Installing nginx package
+# Installing nginx
 - name: Installing nginx
   ansible.builtin.package:
     name: nginx
     state: present
-
-#2.Starting the nginx service
-- name: Start service nginx
+#Starting nginx service
+- name: starting nginx
   ansible.builtin.service:
-    name: nginx
+    name: nginx 
     state: started
-
-#3.Downloading the archive file, unarchive the file and send to dest. All this are performed in remote machine
-- name: Downloading and Extracting
-  ansible.builtin.unarchive:
-    src: https://github.com/stans-robot-project/{{component}}/archive/main.zip
-    dest: /tmp/
-    remote_src: yes 
-
-#4.Cleaning the existing files
-- name: Remove file (delete default files)
-  ansible.builtin.file:
-    path: /usr/share/nginx/html/
-    state: absent
-
-#5 Copying application files
-- name: Copy files
-  ansible.builtin.copy:
-    src: /tmp/frontend-main/static/
-    dest: /usr/share/nginx/html
-    remote_src: yes
-
-#6 Copying localhost.conf file
-- name: Copy localhost.conf files
-  ansible.builtin.copy:
-    src: /tmp/frontend-main/localhost.conf
-    dest: /etc/nginx/default.d/roboshop.conf
-    remote_src: yes
-
-
-- name: Remove file (delete default files)
-  ansible.builtin.file:
-    path: /tmp/frontend-main/
-    state: absent
-
-
-
-
-
-
-
