@@ -5,3 +5,11 @@
       ansible.builtin.copy:
         src: /home/centos/amlan.txt
         dest: /tmp/
+
+- name: Copying another files
+  hosts: all
+  tasks:
+    - name: copying another file to destn
+      ansible.builtin.copy:
+        src: /home/centos/kolkata.txt
+        dest: /home/centos/
