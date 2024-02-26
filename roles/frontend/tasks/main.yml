@@ -10,7 +10,7 @@
     state: started
 
 # #Download and unarchive the file
-- name: Unarchive a file that needs to be downloaded (added in 2.0)
+- name: Unarchive a file that needs to be downloaded (added in 2.0) on {{component}}
   ansible.builtin.unarchive:
     src: "https://github.com/stans-robot-project/{{component}}/archive/main.zip"
     dest: /tmp
@@ -23,14 +23,14 @@
     state: absent    
 
 #copying files
-- name: copying files
+- name: copying files on {{component}}
   ansible.builtin.copy:
     src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html/
     remote_src: yes
 
 #copying roboshop.conf file which is available in local machine. So no need to use remote_src
-- name: copying files
+- name: copying files on {{component}}
   ansible.builtin.copy:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
