@@ -1,5 +1,6 @@
 - name: Configuring roboshop project
   become: True
+  gather_facts: False
   hosts: "{{component}}"
   roles:
     - role: "{{component}}"
