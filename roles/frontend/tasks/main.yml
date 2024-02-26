@@ -25,5 +25,5 @@
 #copying files
 - name: copying files
   ansible.builtin.copy:
-    src: /tmp/frontend-main/static
+    src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html/
