@@ -3,13 +3,8 @@
   ansible.builtin.package:
     name: nginx
     state: present
-#Starting nginx service
-- name: starting nginx
-  ansible.builtin.service:
-    name: nginx 
-    state: started
 
-# #Download and unarchive the file
+#Download and unarchive the file
 - name: Unarchive a file that needs to be downloaded (added in 2.0) on {{component}}
   ansible.builtin.unarchive:
     src: "https://github.com/stans-robot-project/{{component}}/archive/main.zip"
@@ -35,3 +30,8 @@
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
   
+#restarting nginx
+- name: Restarting nginx
+  ansible.builtin.service:
+    name: nginx 
+    state: started
