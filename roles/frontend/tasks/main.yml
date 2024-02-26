@@ -15,3 +15,9 @@
     src: "https://github.com/stans-robot-project/{{component}}/archive/main.zip"
     dest: /tmp
     remote_src: yes
+
+#Removing files from 
+- name: Remove file (delete file)
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent    
