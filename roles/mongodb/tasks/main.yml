@@ -21,7 +21,7 @@
 
 - name: Restarting {{component}}
   ansible.builtin.systemd:
-    name: mongodb
+    name: mongod
     state: started
-    enabled: true
-    daemon_reload: true
+    enabled: yes
+    daemon_reload: yes
