@@ -1,0 +1,27 @@
+
+
+#Copying the repo from local machine 
+- name: copy the {{component}} file
+  ansible.builtin.copy:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongodb.repo
+  
+
+# installing DB
+- name: installing {{component}}
+  ansible.builtin.package:
+    name: mongodb-org
+    state: present 
+
+- name: Replacing Ip for visibility in {{component}}
+  ansible.builtin.replace:
+    path: /etc/mongod.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+
+- name: Restarting {{component}}
+  ansible.builtin.systemd:
+    name: mongodb
+    state: started
+    enabled: true
+    daemon_reload: true
