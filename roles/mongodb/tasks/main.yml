@@ -37,6 +37,6 @@
     file: "/tmp/mongodb-main/{{item}}.js"
     idempotent: yes
   loop: 
-    - users.js  
-    - catalogue.js
+    - users 
+    - catalogue
 
