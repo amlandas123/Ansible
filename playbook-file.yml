@@ -3,7 +3,7 @@
   tasks: 
     - name: Creating files
       ansible.builtin.file:
-        path: /tmp/dasa.txt
+        path: /tmp/dasa123.txt
         state: touch
         mode: u+rx,g+rx,o-rx
 
