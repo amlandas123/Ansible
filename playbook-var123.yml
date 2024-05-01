@@ -1,0 +1,10 @@
+- name: Working on Global and local variables
+  hosts: all
+  vars:
+    url: www.yahoo.com
+
+
+  - tasks:
+      - name: printing local variable
+        ansible.builtin.debug:
+          msg: I have my emailID on {{url}}
