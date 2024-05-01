@@ -8,3 +8,11 @@
       - name: printing local variable
         ansible.builtin.debug:
           msg: I have my emailID on {{url}}
+
+
+      - name: printing local variable
+        ansible.builtin.debug:
+          msg: Can you please look into the site {{abc}}
+        
+        vars:
+          abc: www.rediffmail.com
