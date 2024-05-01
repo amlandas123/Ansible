@@ -4,7 +4,7 @@
     url: www.yahoo.com
 
 
-  - tasks:
+  tasks:
       - name: printing local variable
         ansible.builtin.debug:
           msg: I have my emailID on {{url}}
