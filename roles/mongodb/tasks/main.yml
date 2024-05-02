@@ -32,6 +32,14 @@
     dest: /tmp
     remote_src: yes
 
+
+- name: Downloading schema
+  community.mongodb.mongodb_shell:
+    # login_user: user
+    # login_password: secret
+    file: "/tmp/mongodb-main/users.js"
+    idempotent: yes
+
 # - name: Injecting users schema
 #   community.mongodb.mongodb_shell:
 #     file: "/tmp/mongodb-main/users.js"
