@@ -32,10 +32,10 @@
     dest: /tmp
     remote_src: yes
 
-# - name: Injecting users and catalogue schema
-#   community.mongodb.mongodb_shell:
-#     file: "/tmp/mongodb-main/users.js"
-#     idempotent: yes
+- name: Injecting users schema
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/users.js"
+    idempotent: yes
   
 # - name: Injecting users and catalogue schema
 #   community.mongodb.mongodb_shell:
