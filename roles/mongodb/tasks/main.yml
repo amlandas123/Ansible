@@ -36,6 +36,7 @@
   community.mongodb.mongodb_shell:
     file: "/tmp/mongodb-main/users.js"
     idempotent: yes
+    remote_src: yes
   
 - name: Injecting users and catalogue schema
   community.mongodb.mongodb_shell:
