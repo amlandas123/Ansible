@@ -35,8 +35,6 @@
 
 - name: Downloading schema
   community.mongodb.mongodb_shell:
-    # login_user: user
-    # login_password: secret
     file: "/tmp/mongodb-main/users.js"
     idempotent: yes
 
