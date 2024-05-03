@@ -33,10 +33,13 @@
     remote_src: yes
 
 
-- name: Downloading schema
+- name: Injecting Users & Catalogue Schema 
   community.mongodb.mongodb_shell:
-    file: "/tmp/mongodb-main/users.js"
+    file: "/tmp/mongodb-main/{{item}}.js"
     idempotent: yes
+  loop: 
+    - users
+    - catalogue
 
 # - name: Injecting users schema
 #   community.mongodb.mongodb_shell:
