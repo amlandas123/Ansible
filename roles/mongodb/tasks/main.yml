@@ -29,11 +29,11 @@
 
 - name: Injecting Users & Catalogue Schema 
   community.mongodb.mongodb_shell:
-    file: "/tmp/mongodb-main/{{item}}.js"
+    file: "/tmp/mongodb-main/users.js"
     idempotent: yes
-  loop: 
-    - users
-    - catalogue
+  # loop: 
+  #   - users
+  #   - catalogue
 
 # #Copying the repo from local machine 
 # - name: copy the {{component}} file
