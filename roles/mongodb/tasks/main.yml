@@ -27,13 +27,13 @@
     dest: /tmp 
     remote_src: yes   
 
-- name: Injecting Users Schema 
+- name: Injecting Users & catalogue Schema 
   community.mongodb.mongodb_shell:
-    file: "/tmp/mongodb-main/users.js"
+    file: "/tmp/mongodb-main/{{item}}.js"
     idempotent: yes
-  # loop: 
-  #   - users
-  #   - catalogue
+  loop: 
+    - users
+    - catalogue
 
 # #Copying the repo from local machine 
 # - name: copy the {{component}} file
