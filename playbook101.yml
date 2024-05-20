@@ -18,7 +18,11 @@
         msg: "Welcome to Ansible world"
         register: out    
     
+    - name: play 04
+      set_fact:
+        EXITCODE= "{{out.rc}}"
+
     - name: play 03
       ansible.builtin.copy:
-        src: "{{out.rc}}"
+        src: "{{EXITCODE}}"
         dest: /tmp/ansible-demo/text1.txt    
