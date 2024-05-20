@@ -12,17 +12,12 @@
       ansible.builtin.file:
         path: /tmp/ansible-demo/text1.txt
         state: touch        
+        
 
-    - name: Get uptime information
-      ansible.builtin.shell: echo "Hello Everyone"
-      register: result
-
-    # - name: Print return information from the previous task
-    #   ansible.builtin.debug:
-    #   vars: 
-    #     abc: result
-
-    - name: play 05
+    - name: copying content
       ansible.builtin.copy:
-        src: "{{result}}"
-        dest: /tmp/ansible-demo/text1.txt    
+        dest: /tmp/ansible-demo/text1.txt
+        content:
+              "Hello Everyone"   
+            
+ 
