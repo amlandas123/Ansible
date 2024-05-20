@@ -19,7 +19,7 @@
 
     - name: Print return information from the previous task
       ansible.builtin.debug:
-      var: 
+      vars: 
         abc: result
 
     - name: play 05
