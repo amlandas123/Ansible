@@ -10,14 +10,17 @@
 
     - name: play 02
       ansible.builtin.file:
-        path: /tmp/ansible-demo/text1.txt
-        state: touch        
+        path: /tmp/ansible-demo/{{ item }}
+        state: touch 
+      loop:
+        - text23.txt
+        - text45.txt       
         
 
-    - name: copying content
-      ansible.builtin.copy:
-        dest: /tmp/ansible-demo/text1.txt
-        content:
-              "Hello Everyone"   
+    # - name: copying content
+    #   ansible.builtin.copy:
+    #     dest: /tmp/ansible-demo/text1.txt
+    #     content:
+    #           "Hello Everyone"   
             
  
