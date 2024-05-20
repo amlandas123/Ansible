@@ -7,7 +7,7 @@
       ansible.builtin.file:
         path: /tmp/ansible-demo
         state: directory
-        idempotent: yes
+    
 
     - name: play 02
       ansible.builtin.file:
