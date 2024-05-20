@@ -22,7 +22,7 @@
       set_fact:
         EXITCODE= "{{out.rc}}"
 
-    - name: play 03
+    - name: play 05
       ansible.builtin.copy:
         src: "{{EXITCODE}}"
         dest: /tmp/ansible-demo/text1.txt    
