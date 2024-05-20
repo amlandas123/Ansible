@@ -1,7 +1,20 @@
 - name: creating directory
   hosts: all
+  vars:
+     var_file: "Welcome to Ansible world"
   tasks:
     - name: play 01
       ansible.builtin.file:
         path: /tmp/ansible-demo
         state: directory
+        idempotent: yes
+
+    - name: play 02
+      ansible.builtin.file:
+        path: /tmp/ansible-demo/text1.txt
+        state: touch        
+
+    - name: play 03
+      ansible.builtin.copy:
+        src: {{var_file}}
+        dest: /tmp/ansible-demo/text1.txt    
