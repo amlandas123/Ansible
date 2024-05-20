@@ -13,16 +13,16 @@
         path: /tmp/ansible-demo/text1.txt
         state: touch        
 
-    - name: play 03
+    - name: Get uptime information
+      ansible.builtin.shell: echo "Hello Everyone"
+      register: result
+
+    - name: Print return information from the previous task
       ansible.builtin.debug:
-        msg: "Welcome to Ansible world"
-        register: out    
-    
-    - name: play 04
-      set_fact:
-        EXITCODE= "{{out.rc}}"
+      var: 
+        abc: result
 
     - name: play 05
       ansible.builtin.copy:
-        src: "{{EXITCODE}}"
+        src: "{{abc}}"
         dest: /tmp/ansible-demo/text1.txt    
