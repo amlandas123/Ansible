@@ -16,5 +16,5 @@
 
     - name: play 03
       ansible.builtin.copy:
-        src: {{abc}}
+        src: "{{abc}}"
         dest: /tmp/ansible-demo/text1.txt    
