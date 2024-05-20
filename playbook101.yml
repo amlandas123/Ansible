@@ -17,12 +17,12 @@
       ansible.builtin.shell: echo "Hello Everyone"
       register: result
 
-    - name: Print return information from the previous task
-      ansible.builtin.debug:
-      vars: 
-        abc: result
+    # - name: Print return information from the previous task
+    #   ansible.builtin.debug:
+    #   vars: 
+    #     abc: result
 
     - name: play 05
       ansible.builtin.copy:
-        src: "{{abc}}"
+        src: "{{result}}"
         dest: /tmp/ansible-demo/text1.txt    
