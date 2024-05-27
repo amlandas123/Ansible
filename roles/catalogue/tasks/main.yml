@@ -11,22 +11,22 @@
   ansible.builtin.user:
     name: "{{appuser}}"
 
-- name: Download and extracting {{component}}
-  ansible.builtin.unarchive:
-    src: https://github.com/stans-robot-project/{{component}}/archive/main.zip
-    dest: /tmp
-    remote_src: yes   
+# - name: Download and extracting {{component}}
+#   ansible.builtin.unarchive:
+#     src: https://github.com/stans-robot-project/{{component}}/archive/main.zip
+#     dest: /tmp
+#     remote_src: yes   
 
-- name: Remove file (delete file)
-  ansible.builtin.file:
-    path: /home/{{appuser}}/{{component}}
-    state: absent
+# - name: Remove file (delete file)
+#   ansible.builtin.file:
+#     path: /home/{{appuser}}/{{component}}
+#     state: absent
 
-- name: Copying file
-  ansible.builtin.copy:
-    src: /tmp/{{component}}-main
-    dest: /home/{{appuser}}/{{component}}/
-    owner: "{{appuser}}"
-    group: "{{appuser}}"
-    remote_src: yes 
+# - name: Copying file
+#   ansible.builtin.copy:
+#     src: /tmp/{{component}}-main
+#     dest: /home/{{appuser}}/{{component}}/
+#     owner: "{{appuser}}"
+#     group: "{{appuser}}"
+#     remote_src: yes 
 
