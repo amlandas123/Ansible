@@ -30,7 +30,7 @@
     group: "{{appuser}}"
     remote_src: yes 
 
-- name: generating {{component}} artifacts
+- name: generating artifacts
   community.general.npm:
     - name: roboshop-script
       path: /home/{{appuser}}/{{component}}/
@@ -40,4 +40,4 @@
     src: systemd.service
     dest: /etc/systemd/system/catalogue.service
 
-    
+
