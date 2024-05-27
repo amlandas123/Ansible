@@ -1,6 +1,6 @@
 - name: Configuring nodesjs
   ansible.builtin.shell: yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
-  
+  ignore_errors: true
 
 - name: Installing {{component}} package
   ansible.builtin.package:
