@@ -32,7 +32,6 @@
 
 - name: generating artifacts
   community.general.npm:
-      name: roboshop-script
       path: /home/{{appuser}}/{{component}}
 
 - name: copying systemd.service file
