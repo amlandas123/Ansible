@@ -17,10 +17,10 @@
     dest: /tmp
     remote_src: yes   
 
-# - name: Remove file (delete file)
-#   ansible.builtin.file:
-#     path: /home/{{appuser}}/{{component}}
-#     state: absent
+- name: Cleanup
+  ansible.builtin.file:
+    path: /home/{{component}}
+    state: absent
 
 # - name: Copying file
 #   ansible.builtin.copy:
