@@ -19,7 +19,7 @@
 
 - name: Cleanup existing components
   ansible.builtin.file:
-    path: /home/{{appuser}}/{{component}}
+    path: /home/{{appuser}}/
     state: absent
 
 # - name: Copying file
