@@ -42,7 +42,7 @@
 - name: Restarting {{component}} service
   ansible.builtin.systemd:
     name: "{{component}}"
-    state: started
+    state: restarted
     enabled: true
     daemon_reload: true
 
