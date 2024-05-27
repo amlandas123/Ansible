@@ -26,7 +26,7 @@
 
 #copying roboshop.conf file which is available in local machine. So no need to use remote_src
 - name: copying files on {{component}}
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
