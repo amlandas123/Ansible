@@ -36,8 +36,14 @@
       path: /home/{{appuser}}/{{component}}
 
 - name: copying systemd.service file
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: systemd.service
-    dest: /etc/systemd/system/catalogue.service
+    dest: /etc/systemd/system/{{component}}.service
 
+- name: Restarting {{component}} service
+  ansible.builtin.systemd:
+    name: "{{component}}"
+    state: started
+    enabled: true
+    daemon_reload: true
 
