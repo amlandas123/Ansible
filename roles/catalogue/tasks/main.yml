@@ -22,11 +22,10 @@
     path: /home/{{appuser}}/{{component}}
     state: absent
 
-# - name: Copying file
-#   ansible.builtin.copy:
-#     src: /tmp/{{component}}-main
-#     dest: /home/{{appuser}}/{{component}}/
-#     owner: "{{appuser}}"
-#     group: "{{appuser}}"
-#     remote_src: yes 
-
+- name: Copy file
+  ansible.builtin.copy:
+    src: /tmp/{{component}}-main
+    dest: /home/{{appuser}}/{{componet}}/
+    owner: {{appuser}}
+    group: {{appuser}}
+    remote_src: yes
