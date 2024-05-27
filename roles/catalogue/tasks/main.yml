@@ -30,3 +30,14 @@
     group: "{{appuser}}"
     remote_src: yes 
 
+- name: generating {{component}} artifacts
+  community.general.npm:
+    - name: roboshop-script
+      path: /home/{{appuser}}/{{component}}/
+
+- name: copying systemd.service file
+  ansible.builtin.copy:
+    src: systemd.service
+    dest: /etc/systemd/system/catalogue.service
+
+    
