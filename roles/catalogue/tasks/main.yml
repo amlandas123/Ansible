@@ -30,19 +30,19 @@
     group: "{{appuser}}"
     remote_src: yes 
 
-# - name: generating artifacts
-#   community.general.npm:
-#       path: /home/{{appuser}}/{{component}}/
+- name: generating artifacts
+  community.general.npm:
+      path: /home/{{appuser}}/{{component}}/
 
-# - name: copying systemd.service file
-#   ansible.builtin.template:
-#     src: systemd.service
-#     dest: /etc/systemd/system/{{component}}.service
+- name: copying systemd.service file
+  ansible.builtin.template:
+    src: systemd.service
+    dest: /etc/systemd/system/{{component}}.service
 
-# - name: Restarting {{component}} service
-#   ansible.builtin.systemd:
-#     name: "{{component}}"
-#     state: restarted
-#     enabled: true
-#     daemon_reload: true
+- name: Restarting {{component}} service
+  ansible.builtin.systemd:
+    name: "{{component}}"
+    state: restarted
+    enabled: true
+    daemon_reload: true
 
