@@ -17,9 +17,9 @@
     dest: /tmp
     remote_src: yes   
 
-- name: Cleanup
+- name: Cleanup existing components
   ansible.builtin.file:
-    path: /home/{{component}}/
+    path: /home/{{appuser}}/{{component}}
     state: absent
 
 # - name: Copying file
