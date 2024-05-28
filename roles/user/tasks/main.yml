@@ -42,10 +42,11 @@
 - name: Restarting {{component}} service
   ansible.builtin.systemd:
     name: "{{component}}"
-    state: restarted
+    state: started
     enabled: true
     daemon_reload: true
 
 - name: Changing name of host
   ansible.builtin.hostname:
     name: "{{component}}"
+    become: true
