@@ -45,3 +45,7 @@
     state: restarted
     enabled: true
     daemon_reload: true
+
+- name: Changing name of host
+  ansible.builtin.hostname:
+    name: "{{component}}"
