@@ -1,5 +1,6 @@
 - name: Configuring nodesjs
   ansible.builtin.shell: yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
+  ignore_errors: true
 
 - name: Installing {{component}} package
   ansible.builtin.package:
@@ -23,9 +24,24 @@
 
 - name: Copying file
   ansible.builtin.copy:
-    src: /tmp/{{component}}-main
-    dest: /home/{{appuser}}/{{component}}/
+    src: /tmp/{{component}}-main/
+    dest: /home/{{appuser}}/{{component}}
     owner: "{{appuser}}"
     group: "{{appuser}}"
     remote_src: yes 
 
+- name: generating artifacts
+  community.general.npm:
+      path: /home/{{appuser}}/{{component}}/
+
+- name: copying systemd.service file
+  ansible.builtin.template:
+    src: systemd.service
+    dest: /etc/systemd/system/{{component}}.service
+
+- name: Restarting {{component}} service
+  ansible.builtin.systemd:
+    name: "{{component}}"
+    state: restarted
+    enabled: true
+    daemon_reload: true
