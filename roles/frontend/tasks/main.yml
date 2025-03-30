@@ -30,6 +30,7 @@
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
+#Restarting nginx
 - name: Restarting nginx
   ansible.builtin.systemd:
     name: nginx
